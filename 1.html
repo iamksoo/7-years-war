@@ -22,8 +22,8 @@
      margin: 0px;
      padding: 40px;
    }
-   ol {
-     font-size: 20px
+   #small {
+     font-size: 20px;
      width: 200px;
      margin: 0px;
      padding: 40px;
@@ -37,10 +37,13 @@
       display:block;
     }
     h1{
-      font-size: 40px
+      font-size: 45px
     }
     #big{
-      font-size:20px
+      font-size: 20px
+    }
+    #small{
+      font-size: 20px
     }
   }
   </style>
@@ -76,6 +79,7 @@
     }
     ">
     <div id="grid">
+      <div>
       <ol id="big">
         <li><a href="1.html">30년 전쟁 이후의 유럽</a></li>
         <li><a href="2.html">프로이센의 탄생과 발전</a></li>
@@ -83,6 +87,19 @@
         <li><a href="4.html">오스트리아 왕위 계승 전쟁</a></li>
         <li><a href="5.html">7년 전쟁</a></li>
       </ol>
+      <script>
+        var content = ['30년 전쟁이후 독일과 17 세기에서 18세기로 넘어오며 벌어진 전술변화','절대왕정이란 무엇인가?','절대왕정으로 나아가는 방향']
+      </script>
+      <ol id="small">
+        <script>
+          var i = 0;
+          while(i < content.length){
+            document.write('<li>'+content[i]+ '</li>');
+            i = i + 1;
+        }
+        </script>
+      </ol>
+    </div>
     <div>
     <h2>30년 전쟁 이후의 유럽</h2>
     <p style="margin-top:45px;"><strong><a href="https://ko.wikipedia.org/wiki/30%EB%85%84_%EC%A0%84%EC%9F%81" target="_blank" title="30년 전쟁">30년 전쟁</a>이후 독일과 17 세기에서 18세기로 넘어오며 벌어진 전술변화</strong>: 30년 전쟁에 간단히 설명하자면 유럽에서 로마 가톨릭교회를 지지하는 국가들과 개신교를 지지하는 국가들 사이에서 벌어진 종교 전쟁이다.(당시 사람들은 30년 전쟁을 같은 전쟁이라 생각하지 않았지만 후대에 역사학자들이 이 당시 여러 종교전쟁들을 통합하여 부르게 되었다: 최초로 부른이는 <a href="https://ko.wikipedia.org/wiki/%EC%82%AC%EB%AC%B4%EC%97%98_%ED%8F%B0_%ED%91%B8%ED%8E%9C%EB%8F%84%EB%A5%B4%ED%94%84" target="_blank" title="사무엘 폰 푸텐도르프"> 사무엘 폰 푸펜도르프</a>이다) 유럽 뿐만 아니라 인류의 전쟁사에서 가장 잔혹하고 사망자가 많은 전쟁 중 하나였으며, 사망자수는 약 800만 명이었다. 이 끔찍한 전쟁은 1648년 5월 15일 그 유명한 <a href="https://ko.wikipedia.org/wiki/%EB%B2%A0%EC%8A%A4%ED%8A%B8%ED%8C%94%EB%A0%8C_%EC%A1%B0%EC%95%BD" target="_blank" title="베스트팔렌 조약">베스트팔렌 조약</a>으로 막을 내리게 되었다. 30년 전쟁은 17세기 전쟁을 대표하는 전쟁으로 전쟁에서 총과 대포 그리고 직업군인이 등장하며 과거와 다르게 높은 훈련도와 많은 돈이 필요하였다. 18세기 부터는 파이크병이 사라지고 국가단위 군단이 등장하며 더욱더 스케일이 커지게 된다. 또한 사각형 밀집대형<a href="https://ko.wikipedia.org/wiki/%ED%85%8C%EB%A5%B4%EC%8B%9C%EC%98%A4" target="_blank"  title="테르시오">테르시오</a>가 사라지고 횡으로 길게 늘어서는 <a href="https://namu.wiki/w/%EC%A0%84%EC%97%B4%EB%B3%B4%EB%B3%91" target="_blank" title="전열보병">전열대형 보병</a>이 등장한다. 18세기의 특징이라 할 수 있는 점은 절대왕정과 국가단위 군단이라 할 수 있다. 절대왕정의 심볼은 중앙 집중된 권력, 즉 상료제와 상비군이라 할 수 있는데 이때 시대만 해도 굉장히 비싼 <strong>총, 대포, 말, 화약</strong> 등 무기부터 이러한 무기를 다루고 전열보병 대형을 맞추어 이동, 전투 할 수 있는 훈련된 직업군인(상비군)을 유지하기 위해선 막대한 돈이 필요하고 이를 위해 국가단위의 군대가 필요했던 것이다. 18세기는 절대왕정이 들어오고 거의 봉건제가 끝나며(동유럽 제외) 국가의 권력이 세지고 부가 늘어난다. 이에 따라 군대의 질과 규모도 커지게 된다. 따라서 18세기에 들어오며 국가의 경제력이 곧 군사력과 직결되는 현대전의 양상을 띄게 된 것이다.<br>그렇다면 30년 전쟁 직후 30년 전쟁의 주무대이자 프로이센을 포함하는 독일지방은 어떻했을까? 당시 독일 지방의 상황은 지옥 그 자체 였다고 할 수 있었다. 전쟁이 끝나갈수록 용병들의 약탈은 점점 심해저서 당시 독일은 식량도 재신도 거의 다 털린 상황에서 사람들은 살아남기 위해 식인을 했다고 전해질 정도이다. 실제로 독일 지방은 전쟁이 끝난후 인구의 3분의 2가 죽거나 떠났다고 한다.</p><br>
