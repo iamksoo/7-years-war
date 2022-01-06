@@ -3,7 +3,120 @@
 <head>
   <title>7년 전쟁- 30년 전쟁 이후의 유럽</title>
   <meta charset="utf-8">
-  <script src="functions.js"></script>
+  <script>
+  var Links = {
+    setColor:function (color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+         alist[i].style.color = color;
+          i = i+1;
+      }
+    }
+  }
+  var Body = {
+    BodysetColor:function (color){
+      document.querySelector('body').style.color = color;
+    },
+    backsetColor:function (color){
+      document.querySelector('body').style.backgroundColor = color;
+    }
+  }
+  function nightdayhandler(self){
+    var target = document.querySelector('body')
+    if (self.value === 'night'){
+      Body.backsetColor('black');
+      Body.BodysetColor('white');
+      self.value = 'day';
+
+      Links.setColor('red');
+
+    } else {
+      Body.backsetColor('white');
+      Body.BodysetColor('black');
+        self.value = 'night';
+
+      Links.setColor('blue');
+
+    }
+  }
+  var BodyB = {
+    BodysetColorb:function(color){
+      document.querySelector('body').style.backgroundColor = color;
+    },
+    setColorb:function(color){
+      document.querySelector('#B_colorchange').value = color;
+    }
+  }
+  function Bcolorhandler(self){
+    var target = document.querySelector('body');
+    if(self.value === 'SlateGray'){
+      BodyB.BodysetColorb('SlateGray');
+      BodyB.setColorb('SeaGreen');
+    } else if(self.value === 'SeaGreen'){
+      BodyB.BodysetColorb('SeaGreen');
+      BodyB.setColorb('SeaShell');
+    } else if(self.value === 'SeaShell'){
+      BodyB.BodysetColorb('SeaShell');
+      BodyB.setColorb('LightCoral');
+    } else{
+      BodyB.BodysetColorb('LightCoral');
+      BodyB.setColorb('SlateGray');
+    }
+  }
+  var BodyT = {
+    BodysetColort:function(color){
+      document.querySelector('body').style.color = color;
+    },
+    setColort:function(color){
+      document.querySelector('#T_colorchange').value = color;
+    }
+  }
+  function Tcolorhandler(self){
+    var target = document.querySelector('body');
+    if(self.value === 'Purple'){
+      BodyT.BodysetColort('Purple');
+      BodyT.setColort('Indigo');
+    } else if(self.value === 'Indigo'){
+      BodyT.BodysetColort('Indigo');
+      BodyT.setColort('CadetBlue');
+    } else if(self.value === 'CadetBlue'){
+      BodyT.BodysetColort('CadetBlue');
+      BodyT.setColort('salmon');
+    } else{
+      BodyT.BodysetColort('salmon');
+      BodyT.setColort('Purple');
+    }
+  }
+  var seemSize = 1,
+     zoomSize = 1,
+     browser = navigator.userAgent.toLowerCase();
+function zoomIn()
+  {
+    seemSize += 0.05;
+        zoomSize *= 1.2;
+    zoom();
+  }
+  function zoomOut(){
+    seemSize -= 0.05;
+        zoomSize /= 1.2;
+    zoom();
+  }
+  function zoom(){
+       if (browser.indexOf("firefox") != -1) { //브라우저가 firefox일때
+        document.body.style.webkitTransform =    'scale('+seemSize+')';
+        document.body.style.webkitTransformOrigin = '50% 0 0'; //늘리고 줄였을때위치,
+        document.body.style.msTransform =   'scale('+seemSize+')';
+        document.body.style.msTransformOrigin = '50% 0 0';
+        document.body.style.transform = 'scale('+seemSize+')';
+        document.body.style.transformOrigin='50% 0 0';
+        document.body.style.OTransform = 'scale('+seemSize+')';
+        document.body.style.OTransformOrigin='50% 0 0';
+       }else{
+        document.body.style.zoom = zoomSize;
+        }
+  }
+  </script>
   <style>
    body{
      margin: 0px;
@@ -187,7 +300,7 @@
     </p>
    </div>
    <div id="box5">
-    <p style="margin-top:65px;">그렇다면 프로이센의 상황은 어떡했을까? 프로이센식 절대왕정을 이해하려면 프로이센에 대한 이해가 필요하다. 자세한 이야기는 나중에 하고 지금은 간단한 설명만 하도록 하겠다. 프로이센 이야기를 하기 전에 먼저 브란덴부르크 이야기를 안할 수가 없다. 때문에 먼저 브란덴부르크에 관한 설명을 하도록 하겠다. 게르만족의 영역이었던 브란덴부르크 지역에 7세기 무렵 슬라브족들이 비스툴라 강 동쪽에서 건너와 이 곳에 거주하기 시작했다. 독일 왕 하인리히 1세가 슬라브족들에 대한 통치권을 행사하였지만 이후 다시 슬라브족들에게 통치권이 넘어갔다가 12세기 무렵 신성 로마 제국의 강력한 제후였던 하인리히 사자공의 노력에 힘입어 다시 게르만족이 주도권을 잡았다. 이렇게 결국 신성 로마 제국으로 흡수되어 신성로마제국의 변경백이 된다.</P>
+    <p style="margin-top:65px;">그렇다면 프로이센의 상황은 어떡했을까? 프로이센식 절대왕정을 이해하려면 프로이센에 대한 이해가 필요하다. 자세한 이야기는 나중에 하고 지금은 간단한 설명만 하도록 하겠다. 프로이센 이야기를 하기 전에 먼저 브란덴부르크 이야기를 안할 수가 없다. 때문에 먼저 브란덴부르크에 관한 설명을 하도록 하겠다. 게르만족의 영역이었던 브란덴부르크 지역에 7세기 무렵 슬라브족들이 비스툴라 강 동쪽에서 건너와 이 곳에 거주하기 시작했다. 독일 왕 하인리히 1세가 슬라브족들에 대한 통치권을 행사하였지만 이후 다시 슬라브족들에게 통치권이 넘어갔다가 12세기 무렵 신성 로마 제국의 강력한 제후였던 하인리히 사자공의 노력에 힘입어 다시 게르만족이 주도권을 잡았다. 이렇게 결국 신성 로마 제국으로 흡수되어 신성로마제국의 변경백이 된다. 변경백이란</P>
    </div>
    </p>
     <p>
